@@ -22,7 +22,7 @@
 
 		3 * 5 * 7 = 105
 	
-	So let's make our "play_until" variable at least 105.
+	So let's make our "play_until" variable a little greater than 105.
 */
 var play_until = 110;
 
@@ -36,12 +36,22 @@ var output = ""; // These double quotes let the computer know "output" will be a
 for (var i = 1; i <= play_until; i++) {
 	/*
 		One thing to keep in mind in JavaScript (as well as some other programming languages) is that when you only
-		have one line in a statement (if, for, while, function, etc.), we can omit the curly brackets ({}) entirely.
+		have one line in a statement (if, for, while, function, etc.), we can omit curly brackets ({}) entirely. So
+		womething like this:
 
-		These first two "if" statements should look pretty familiar...
+		if (condition) {
+			do_a_thing();
+		}
+
+		Can be cleaned up to look like this:
+
+		if (condition)
+			do_a_thing();
+
+		Barring that, these first two "if" statements should look pretty familiar...
 	*/
 	if (i % 3 == 0)
-		output += "Fizz"; // With this, we can quickly and cleanly add "Fizz" to the end of the string.
+		output += "Fizz"; // With this, we can quickly and cleanly append "Fizz" to the end of the string.
 
 	if (i % 5 == 0)
 		output += "Buzz";
@@ -59,7 +69,7 @@ for (var i = 1; i <= play_until; i++) {
 		our "output" string. To do this, we can check the string's ".length" property like this:
 	*/
 	if (output.length == 0)
-		output += i; // Adding a number to the end of a string is just as easy as adding another string.
+		output += i; // Appending a number to the end of a string is just as easy as appending a string.
 
 	/*
 		Finally, we should print our output and empty out our string by setting it to and empty string. ("")
