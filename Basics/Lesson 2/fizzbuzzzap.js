@@ -9,26 +9,31 @@
 	To-do:
 	  - Write words on the same line
 	  - Make it easy to add more words
-*/
 
-/*
 	Most of this code will look pretty familiar, so I won't go through explaining it all. Just the new stuff.
 */
 
 /*
-	Let's start off by making our program run for a little longer. That way we can see it say "FizzBuzzZap"
-	which will first happen at 3*5*7=105
+	Let's start off by making sure we can see our program actually say "FizzBuzzZap" when we run it. To do this,
+	our "play_until" variable should be greater than or equal to the greatest common denominator of all our numbers.
+	Now that was a lot of math jargon, so I've made things a little easier. Because 3, 5, and 7 (our numbers for
+	"Fizz", "Buzz", and "Zap" respectively) are prime, we can just multiply them all together to find their greatest
+	common denominator:
+
+		3 * 5 * 7 = 105
+	
+	So let's make our "play_until" variable at least 105.
 */
 var play_until = 110;
 
 /*
-	Starting off, let's add a new variable called "output". This will be what the program says at the end of each
+	Next, let's add a new variable called "output". This will be what the program says at the end of each
 	loop. We'll start off by making it an empty string.
 */
 
 var output = ""; // These double quotes let the computer know "output" will be a string.
 
-for (var i = 1; i < play_until; i++) {
+for (var i = 1; i <= play_until; i++) {
 	/*
 		One thing to keep in mind in JavaScript (as well as some other programming languages) is that when you only
 		have one line in a statement (if, for, while, function, etc.), we can omit the curly brackets ({}) entirely.
@@ -62,3 +67,5 @@ for (var i = 1; i < play_until; i++) {
 	console.log(output);
 	output = "";
 }
+
+// Now we just have to run our program with Node.js (node fizzbuzzzap.js)

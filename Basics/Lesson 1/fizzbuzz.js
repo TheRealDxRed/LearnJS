@@ -1,4 +1,9 @@
 /*
+	Let's play FizzBuzz. It's a simple math game you might find in programming interviews as well as
+	a good first-time project to help learn a new programming language. It will introduce us to "if"
+	statements, "for" loops, and some basic conditional operations, creating a great foundation to
+	build up our knowledge of JavaScript.
+
 	The rules of FizzBuzz are simple:
 	 - Count up, starting from one, saying the numbers out loud
 	 - When you reach a multiple of 3, say "Fizz" instead
@@ -12,8 +17,8 @@
 */
 
 /*
-	While we could make this program play FizzBuzz forever,
-	that would be a bit of a waste. So let's play until we reach...
+	While we could make this program play FizzBuzz forever, that would be a bit of a waste. So\
+	let's play until we reach...
 */
 
 var play_until = 20; // ...20! This should give us plenty of "Fizz"es and "Buzz"es to work with for now.
@@ -73,3 +78,5 @@ for (var i = 1; i <= play_until; i++) {
 		console.log(i);
 	}
 }
+
+// Go ahead and run this with Node.js to see it play. (node fizzbuzz.js)
